@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang='de'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CV Diego P. Steiner</title>
+    <meta name="author" content="Diego P. Steiner <diego.steiner@u041.ch>">
+    <meta name="keywords" content="Software Engineer, Web Wizard">
+    <link href="https://fonts.googleapis.com/css?family=Cardo|Lato" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js' type="text/javascript"></script>
+    <style type="text/css">
+        body {
+            margin: 0 auto;
+            max-width: 960px;
+            font-family: 'Lato', serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .title {
+            font-family: 'Cardo', sans-serif;
+            font-weight: bold;
+        }
+
+        section>h2 {
+            border-bottom: 1px solid #999;
+        }
+
+        .title {
+            font-size: 3em;
+        }
+
+        .portrait {
+            /*padding-bottom: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+            background: url('assets/portrait.jpg') 10px -15px;
+            background-size: cover;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); */
+            position: relative;
+        }
+
+        .encrypted {
+            max-width: 180px;
+            color: #DDD;
+            display: inline-block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .portrait img {
+            position: absolute;
+        }
+
+        #contact li .fa {
+            width: 1.5rem;
+        }
+
+        p {
+            line-height: 1.5rem;
+            margin: 0 0 .5rem 0;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        @media screen and (max-width: 768px) {
+            .row {
+                display: block;
+            }
+
+            .portrait img {
+                position: relative;
+            }
+        }
+
+        section,
+        header {
+            margin: 1rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .col-1-3 {
+            flex: 1;
+        }
+
+        .col-2-3 {
+            flex: 2;
+        }
+
+        #contact>ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a,
+        a:visited {
+            color: blue;
+        }
+
+        #contact ul>li {
+            margin-bottom: .5rem;
+        }
+
+        #job-experience ul.experiences>li {
+            margin-bottom: 1.5rem;
+        }
+
+        #profile ul.experiences>li {
+            margin-bottom: .5rem;
+        }
+
+        ul.experiences {
+            margin: 0;
+            /*margin-left: -1rem;*/
+            /*border-left: 5px solid #DDD;*/
+            list-style: none;
+            /*padding-left: 1rem;*/
+            padding: 0;
+        }
+
+        ul.experiences>li {
+            margin-left: 0;
+            /*margin-left: -5px;*/
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul li ul li,
+        ul.experiences li ul li {
+            margin-bottom: 0.25rem;
+        }
+
+        ul li ul {
+            padding-left: 1.25rem;
+        }
+
+        ul.experiences .experience-index {
+            flex: 3;
+        }
+
+        ul.experiences .experience-value {
+            flex: 10;
+        }
+
+        ul.experiences .brief-only .experience-value p:not(.brief) {
+            display: none;
+        }
+
+        ul.experiences li {
+            margin-bottom: 1rem;
+        }
+
+        .brief-only {
+            opacity: 0.6;
+        }
+
+        .experiences h3 {
+            margin: 0 0 .25rem 0;
+        }
+
+        .timespan {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="row">
+        <div class="col-2-3">
+            <div class="title">Diego P. Steiner</div>
+        </div>
+        <div class='col-1-3'>
+            <div class="portrait">
+                <img src='assets/portrait-circle.jpg' />
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="contact" class='row'>
+            <ul class="with-icons">
+                <li><span class="fa fa-github"></span> <a href="https://github.com/diegosteiner">github.com/diegosteiner</a></li>
+                <li><span class="fa fa-envelope-o"></span> <a href="mailto:diego.steiner@u041.ch">diego.steiner@u041.ch</a></li>
+                <li><span class="fa fa-phone"></span> <span class='encrypted'>U2FsdGVkX181Kwpon3GoLAsxPEk2BdVYPPQ7hOGkyQRJcjep2NoNLLZwmHUwVrsW</span></li>
+                <li><span class="fa fa-home"></span> <span class='encrypted'>U2FsdGVkX1+xJesIQa8bp16eVfSY3dGu2UxEUwqBOJIhJgbpWjBUOX3UstYeis7F</span></li>
+            </ul>
+        </section>
+        <section id="profile">
+            <ul class="experiences">
+                <li class="row" ;>
+                    <div class="experience-index">
+                        <div>Geburtstag:</div>
+                    </div>
+                    <div class="experience-value">
+                        <span class="encrypted">U2FsdGVkX1+mAzNMnY0hOwMqmMq9IQI3ugyDT49hAQk=</span>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="experience-index">
+                        <div>Heimatort:</div>
+                    </div>
+                    <div class="experience-value">
+                        <span class="encrypted">U2FsdGVkX18roJznygT7UH4s3/myi3SJrw8JOpgcBDE=</span>
+
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="experience-index">
+                        <div>Sprachkenntnisse:</div>
+                    </div>
+                    <div class="experience-value">
+                        <ul>
+                            <li>Deutsch (Muttersprache)</li>
+                            <li>Englisch (sehr gute Kenntnisse)</li>
+                            <li>Französisch (Schulkenntnisse)</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="job-experience">
+            <h2>Berufserfahrung</h2>
+            <ul class="experiences">
+                <li class="row">
+                    <div class="experience-index">
+                        <h3>Renuo AG</h3>
+                        <div class="timespan">2011 bis 2017</div>
+                    </div>
+                    <div class="experience-value">
+                        <h3>Gründer, Mitglied Geschäftsleitung, Software Engineer</h3>
+                        <p>Zusammen mit einem Schulfreund der IMS habe ich während des Studiums an der Hochschule für Technik
+                            HSR die Softwareentwicklungsagentur <a href="https://renuo.ch">Renuo AG</a> gegründet. Seither
+                            hat sich das Startup zu einem Unternehmen mit über 20 Mitarbeitern weiterentwickelt.</p>
+                        <p>Zu meinen Tätigkeitsbereichen gehörten die Entwicklung von individuellen Webprojekten, insbesondere
+                            mit Ruby on Rails und Angular.
+                        </p>
+                        <p>Weitere Tätigkeiten:</p>
+                        <ul>
+                            <li>Mitglied der Geschäftsleitung sowie des Verwaltungsrats</li>
+                            <li>Strategische Planung und Weiterentwicklung des Unternehmens</li>
+                            <li>Ganzjahresbetreuung von IMS Schülern während ihres Praktikums</li>
+                            <li>Fachvorgesetzer von Individuellen Praktischen Arbeiten IPAs</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="row brief-only">
+                    <div class="experience-index">
+                        <h3>Bus2Alps AG</h3>
+                        <div class="timespan">2009 bis 2010</div>
+                    </div>
+                    <div class="experience-value">
+                        <h3>Software Engineer</h3>
+                        <p class='brief'>Teilzeit Software Engineer PHP &amp; Zend-Framework</p>
+                        <p></p>
+                    </div>
+                </li>
+                <li class="row brief-only">
+                    <div class="experience-index">
+                        <h3>Mathys &amp; Scheitlin AG</h3>
+                        <div class="timespan">2006 bis 2009</div>
+                    </div>
+                    <div class="experience-value">
+                        <h3>Praktikant, Junior Software Engineer</h3>
+                        <p class='brief'>Praktikum (1 Jahr) und anschliessende Anstellung als Junior Software Engineer C# &amp; .NET</p>
+                        <p>Nach der dreijährigen Schulzeit der Informatikmittelschule hatte ich meine Stelle bei der Mathys
+                            &amp; Scheitlin AG zunächst als Praktikant angetreten. Nach erfolgreich abgeschlossener IPA habe
+                            ich als Junior Software Engineer im Betrieb weitergearbeitet.
+                        </p>
+                        <p>Zu meinen Tätigkeitsbereichen gehörten die Entwicklung von Produkten für schweizerische Sozialversicherungsanstalten
+                            mit .NET Technologien.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="education">
+            <h2>Ausbildung</h2>
+            <ul class="experiences">
+                <li class="row">
+                    <div class="experience-index">
+                        <div class="timespan">2017</div>
+                    </div>
+                    <div class="experience-value">
+                        <strong>Zertifizierung Schweizerischen Verband für Weiterbildung SVEB 1: Kursleiter</strong>, Bundesamt
+                        für Sport BASPO, Magglingen BE
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="experience-index">
+                        <div class="timespan">2009 bis 2015</div>
+                    </div>
+                    <div class="experience-value">
+                        <strong>Teilzeitstudium B.Sc. Informatik</strong>, Hochschule für Technik Rapperswil SG
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="experience-index">
+                        <div class="timespan">2007 bis 2008</div>
+                    </div>
+                    <div class="experience-value">
+                        <strong>Rekrutenschule als Informatikpionier</strong>, Bülach ZH
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="experience-index">
+                        <div class="timespan">2004 bis 2005</div>
+                    </div>
+                    <div class="experience-value">
+                        <strong>Zertifizierung Microsoft Certified Systems Administrator MCSA</strong>, Microsoft Certified
+                        Desktop Support Technician (MCDST)
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="experience-index">
+                        <div class="timespan">2003 bis 2006 </div>
+                    </div>
+                    <div class="experience-value">
+                        <strong>Informatikmittelschule IMS</strong>, Kantonschule Hottingen ZH.
+                        <br />Abschluss als Jahrgangsbester in den Informatikfächern
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="experience-index">
+                        <div class="timespan">2000 bis 2003</div>
+                    </div>
+                    <div class="experience-value">
+                        <strong>Sekundarschule A</strong>, Schulhaus Waidhalde, Wipkingen ZH
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="social-commitment">
+            <h2>Freiwilliges Engagement</h2>
+            <ul class="experiences">
+                <li class="row">
+                    <div class="experience-index">
+                        <div class="timespan">seit 2016</div>
+                    </div>
+                    <div class="experience-value">
+                        <strong>Mitarbeit "Team MiData"</strong>, zentrales Tool zur Verwaltung sämtlicher Mitglieder der
+                        Pfadibewegung Schweiz PBS
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="experience-index">
+                        <div class="timespan">seit 2011</div>
+                    </div>
+                    <div class="experience-value">
+                        <strong>Kursleitung Ausbildungskurse J+S Lagersport/Trekking</strong>, Ausbildungskurse für Pfadileiterinnen
+                        und Pfadileiter, bundesweit anerkannt
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="experience-index">
+                        <div class="timespan">seit 2011</div>
+                    </div>
+                    <div class="experience-value">
+                        <strong>Leitung Pfadikorps Limmat</strong>, Verband der sieben Pfadiabteilungen rund um die Limmat
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
