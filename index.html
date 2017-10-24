@@ -46,12 +46,8 @@
             position: relative;
         }
 
-        .encrypted {
-            max-width: 180px;
-            color: #DDD;
-            display: inline-block;
-            text-overflow: ellipsis;
-            overflow: hidden;
+        .encrypted:not(.decrypted) {
+            display: none;
         }
 
         .portrait img {
@@ -180,7 +176,7 @@
     </style>
 </head>
 
-<body>
+<body onload='decrypt()'>
     <header class="row">
         <div class="col-2-3">
             <div class="title">Diego P. Steiner</div>
@@ -194,10 +190,23 @@
     <main>
         <section id="contact" class='row'>
             <ul class="with-icons">
-                <li><span class="fa fa-github"></span> <a href="https://github.com/diegosteiner">github.com/diegosteiner</a></li>
-                <li><span class="fa fa-envelope-o"></span> <a href="mailto:diego.steiner@u041.ch">diego.steiner@u041.ch</a></li>
-                <li><span class="fa fa-phone"></span> <span class='encrypted'>U2FsdGVkX181Kwpon3GoLAsxPEk2BdVYPPQ7hOGkyQRJcjep2NoNLLZwmHUwVrsW</span></li>
-                <li><span class="fa fa-home"></span> <span class='encrypted'>U2FsdGVkX1+xJesIQa8bp16eVfSY3dGu2UxEUwqBOJIhJgbpWjBUOX3UstYeis7F</span></li>
+                <li>
+                    <span class="fa fa-github"></span>
+                    <a href="https://github.com/diegosteiner">github.com/diegosteiner</a>
+                </li>
+                <li>
+                    <span class="fa fa-envelope-o"></span>
+                    <a href="mailto:diego.steiner@u041.ch">diego.steiner@u041.ch</a>
+                </li>
+                <li>
+                    <span class="fa fa-phone"></span>
+                    <span class='encrypted'>U2FsdGVkX1+nLiyayw0pxh9gS8fcfBJzRWfQRsjs4HE=</span>
+                </li>
+                <li>
+                    <span class="fa fa-home"></span>
+                    <span class='encrypted'>U2FsdGVkX19FqexMOZ9wpN+6PcHKjy3UfM30neGm109IW8yyhUUQKaCc1qo60q7C</span>
+
+                </li>
             </ul>
         </section>
         <section id="profile">
@@ -207,7 +216,8 @@
                         <div>Geburtstag:</div>
                     </div>
                     <div class="experience-value">
-                        <span class="encrypted">U2FsdGVkX1+mAzNMnY0hOwMqmMq9IQI3ugyDT49hAQk=</span>
+                        <span class="encrypted">U2FsdGVkX1+fDpU3o64dqe5soVHDGKB9xlPID6ZnHrDNbWdUdUDJ7FNhD06N7Svf</span>
+
                     </div>
                 </li>
                 <li class="row">
@@ -215,7 +225,7 @@
                         <div>Heimatort:</div>
                     </div>
                     <div class="experience-value">
-                        <span class="encrypted">U2FsdGVkX18roJznygT7UH4s3/myi3SJrw8JOpgcBDE=</span>
+                        <span class="encrypted">U2FsdGVkX19ijF2RmwvX+z5OJfYHBZYwAnFFBSVIyNY=</span>
 
                     </div>
                 </li>
@@ -244,8 +254,10 @@
                     <div class="experience-value">
                         <h3>Gründer, Mitglied Geschäftsleitung, Software Engineer</h3>
                         <p>Zusammen mit einem Schulfreund der IMS habe ich während des Studiums an der Hochschule für Technik
-                            HSR die Softwareentwicklungsagentur <a href="https://renuo.ch">Renuo AG</a> gegründet. Seither
-                            hat sich das Startup zu einem Unternehmen mit über 20 Mitarbeitern weiterentwickelt.</p>
+                            HSR die Softwareentwicklungsagentur
+                            <a href="https://renuo.ch">Renuo AG</a> gegründet. Seither hat sich das Startup zu einem Unternehmen mit über 20 Mitarbeitern
+                            weiterentwickelt.
+                        </p>
                         <p>Zu meinen Tätigkeitsbereichen gehörten die Entwicklung von individuellen Webprojekten, insbesondere
                             mit Ruby on Rails und Angular.
                         </p>
@@ -296,8 +308,8 @@
                         <div class="timespan">2017</div>
                     </div>
                     <div class="experience-value">
-                        <strong>Zertifizierung Schweizerischen Verband für Weiterbildung SVEB 1: Kursleiter</strong>, Bundesamt
-                        für Sport BASPO, Magglingen BE
+                        <strong>Zertifizierung Schweizerischen Verband für Weiterbildung SVEB 1: Kursleiter</strong>, Bundesamt für
+                        Sport BASPO, Magglingen BE
                     </div>
                 </li>
                 <li class="row">
@@ -321,8 +333,8 @@
                         <div class="timespan">2004 bis 2005</div>
                     </div>
                     <div class="experience-value">
-                        <strong>Zertifizierung Microsoft Certified Systems Administrator MCSA</strong>, Microsoft Certified
-                        Desktop Support Technician (MCDST)
+                        <strong>Zertifizierung Microsoft Certified Systems Administrator MCSA</strong>, Microsoft Certified Desktop
+                        Support Technician (MCDST)
                     </div>
                 </li>
                 <li class="row">
@@ -352,8 +364,8 @@
                         <div class="timespan">seit 2016</div>
                     </div>
                     <div class="experience-value">
-                        <strong>Mitarbeit "Team MiData"</strong>, zentrales Tool zur Verwaltung sämtlicher Mitglieder der
-                        Pfadibewegung Schweiz PBS
+                        <strong>Mitarbeit "Team MiData"</strong>, zentrales Tool zur Verwaltung sämtlicher Mitglieder der Pfadibewegung
+                        Schweiz PBS
                     </div>
                 </li>
                 <li class="row">
@@ -378,6 +390,22 @@
     </main>
     <footer>
     </footer>
+    <script>
+        function decrypt() {
+            var key = window.location.hash.substr(1);
+            if (key.length <= 0) {
+                return
+            }
+            var secrets = document.getElementsByClassName('encrypted');
+            for (secret of secrets) {
+                decrypted = CryptoJS.AES.decrypt(secret.innerText, key);
+                console.log(decrypted);
+                secret.innerText = decrypted.toString(CryptoJS.enc.Utf8);
+                secret.setAttribute('class', 'encrypted decrypted')
+            }
+        }
+
+    </script>
 </body>
 
 </html>
